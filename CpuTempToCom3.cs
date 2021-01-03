@@ -1,4 +1,8 @@
-﻿using System;
+/*
+* Check line 37 to change the com port. If you want to compile the code yourself, you'll need to add a reference to OpenHardwareMonitorLib.dll
+*/
+
+using System;
 using System.Threading;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,7 +34,7 @@ namespace Get_CPU_Temp5
         static void GetSystemInfo()
         {
             SP = new SerialPort();
-            SP.PortName = "com3";
+            SP.PortName = "com3";             //CHANGE THE COM PORT HERE
             SP.BaudRate = 9600;
             SP.ReadTimeout = 500;
             SP.Open();
