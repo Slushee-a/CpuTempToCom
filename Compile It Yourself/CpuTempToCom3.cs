@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 using OpenHardwareMonitor.Hardware;
 using System.IO.Ports;
 
-namespace Get_CPU_Temp5
+namespace CpuTempToCom3
 {
     class Program
     {
