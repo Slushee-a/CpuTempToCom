@@ -12,3 +12,5 @@ Info:
 > If you think these are red flags and that you should avoid running the program, fair enough. 
   I promise that there isn't any malware in the program, but if you don't trust it don't install it. After all, it's your choice.
   You can check the code and even compile it and make your own installer. I left all the resources in the "Compile It Yourself" folder.
+
+> If there isn't an installer for your COM port and you don't know how to make one youtself, create a Pull request and i'll make it for you.
