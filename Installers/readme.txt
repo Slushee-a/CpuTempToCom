@@ -1,6 +1,6 @@
 Info:
 
-> To install the correct program you'll need to know at what com port the arduino nano is.
+> To install the correct program you'll need to know at what com port the arduino is. (Instructions: https://youtu.be/hou4okcCX7E)
 
 > Your browser will most probabbly warn you that the program isn't usually downloaded and that it might be bloatware
 
