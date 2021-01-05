@@ -44,8 +44,8 @@ void loop()
   SerialTemp = readString;
   Temp = SerialTemp.toInt(); 
 
-  //If you have recieved anything that is above 0 in the serial port, print it//
-  if (Temp >= 1)
+  //If you have recieved anything that is above 10 in the serial port, print it//
+  if (Temp >= 10) //Sometimes the display showed numbers like 2 or 4. To stop that I set it to 10 since those values are below 10 and the cpu temp will never go below 10.
   {
    display.showNumberDec(Temp);
    delay(2000); 
