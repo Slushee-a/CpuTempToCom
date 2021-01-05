@@ -10,21 +10,21 @@
 
 TM1637Display display = TM1637Display(CLK, DIO);  //Create display
 
-int Temp = 0;  //Define a base int for the temperature value
+int Temp = 0;  
+int LWD = 0; //(Loops Without Data)
 
 void setup() 
 {
-  Serial.begin(9600);  //Start serial port
+  Serial.begin(9600);  
 }
 
 void loop() 
 {
-  display.setBrightness(5);  //Set the display brighness to max
+  display.setBrightness(5);  //Set the display brighness
   
-  String readString;  //Create the stings for the serial protocol
+  String readString;  
   String SerialTemp;
 
-  //====Serial protocol====//
   while (Serial.available())
     {
      delay(1);
@@ -40,15 +40,25 @@ void loop()
      }
    }
 
-  //Make the serial reading an int//
   SerialTemp = readString;
   Temp = SerialTemp.toInt(); 
 
-  //If you have recieved anything that is above 10 in the serial port, print it//
   if (Temp >= 10) //Sometimes the display showed numbers like 2 or 4. To stop that I set it to 10 since those values are below 10 and the cpu temp will never go below 10.
   {
    display.showNumberDec(Temp);
    delay(2000); 
+   LWD = 0;
+  }
+
+  else if (Temp >= 10 || LWD >= 2) //I did this so if it doesen't recieve data in two loops it shuts off the display.
+  {                                //Mainly because my computer powers USB devices when it's in sleep mode and I don't
+    display.clear();               //want it to have a random number on the display while it's sleeping.
+  }
+
+  else
+  {
+    LWD = ++LWD;
+    delay(2000);
   }
 
 }
