@@ -68,7 +68,7 @@ namespace CpuTempToCom3
             while (true)
             {
                 GetSystemInfo();
-                await Task.Delay(2000);
+                await Task.Delay(2000); //You can edit here how often does the program send the data (in ms)
             }
         }
     }
