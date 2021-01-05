@@ -7,7 +7,7 @@ Info:
 > Windows smart screen will tell you that this program isn't usually executed in people's computers and that it might be bloatware.
   To run it anyways click on "More info" and a "Run anyway" button will pop up.
 
-> Windows defender might detect it as a virus. For me, it once though it was a "Wacatac" trojan. Windows defender is stupid.
+> Windows defender might detect it as a virus. For me, it once though it was a "Beareuws" trojan. Windows defender is stupid.
 
 > If you think these are red flags and that you should avoid running the program, fair enough. 
   I promise that there isn't any malware in the program, but if you don't trust it don't install it. After all, it's your choice.
